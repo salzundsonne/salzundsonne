@@ -15,6 +15,7 @@ export function ComingSoon() {
     const animations: Animation[] = [];
     const brand = page.querySelector<HTMLElement>("[data-intro-brand]");
     const copy = page.querySelector<HTMLElement>("[data-intro-copy]");
+    const comingSoon = page.querySelector<HTMLElement>("[data-coming-soon]");
     const status = page.querySelector<HTMLElement>("[data-intro-status]");
     const kitchenMark = page.querySelector<HTMLElement>("[data-kitchen-mark]");
     const heat = page.querySelector<HTMLElement>("[data-heat]");
@@ -118,6 +119,23 @@ export function ComingSoon() {
           {
             duration: 520,
             delay: 500,
+            easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+            fill: "both",
+          },
+        ),
+      );
+    }
+
+    if (comingSoon) {
+      animations.push(
+        comingSoon.animate(
+          [
+            { opacity: 0, transform: "translate3d(0, 8px, 0)" },
+            { opacity: 1, transform: "translate3d(0, 0, 0)" },
+          ],
+          {
+            duration: 420,
+            delay: 1280,
             easing: "cubic-bezier(0.16, 1, 0.3, 1)",
             fill: "both",
           },
@@ -249,6 +267,10 @@ export function ComingSoon() {
           <div className="intro-progress" aria-hidden="true">
             <span data-intro-progress />
           </div>
+
+          <p className="coming-soon-label" data-coming-soon>
+            Coming soon
+          </p>
         </div>
 
         <p className="intro-status" data-intro-status>

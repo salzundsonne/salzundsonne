@@ -219,6 +219,17 @@ body {
   box-shadow: 0 0 12px rgba(240, 180, 60, 0.5);
 }
 
+.coming-soon-label {
+  margin: 1rem 0 0;
+  color: rgba(255, 245, 227, 0.82);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .intro-status {
   position: absolute;
   bottom: max(1.7rem, calc(env(safe-area-inset-bottom) + 0.9rem));
@@ -265,6 +276,11 @@ body {
 
   .intro-progress {
     margin-top: 1rem;
+  }
+
+  .coming-soon-label {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
   }
 }
 
